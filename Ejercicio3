@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el nombre del mes: ");
+        String nombreMes = scanner.nextLine();
+        
+        int dias;
+        switch (nombreMes.toLowerCase()) {
+            case "febrero":
+                dias = 28;
+                break;
+            case "noviembre":
+            case "abril":
+            case "junio":
+            case "septiembre":
+                dias = 30;
+                break;
+            default:
+                dias = 31;
+                break;
+        }
+        
+        System.out.println(nombreMes + " tiene " + dias + " días.");
+    }
+}
